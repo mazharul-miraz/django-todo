@@ -51,7 +51,15 @@ tr:nth-child(even) {
   background-color: #000;
 }
 
-
+input[type=text], select, textarea {
+    width: 80%;
+    padding: 12px;
+    border: 0;
+    border-radius: 2px;
+    resize: vertical;
+    background: #6a6a6a;
+    color: #000;
+  }
 </style>
 </head>
 <body>
@@ -63,44 +71,27 @@ tr:nth-child(even) {
       <li><a href="{% url "viewdata" %}">View</a></li>
     </ul>
   </nav>
-  <h2>Data Table</h2>
+  <h2>Create a record</h2>
   <table>
     <tr>
-      <th>Company</th>
-      <th>Contact</th>
-      <th>Country</th>
+      <th>User Name</th>
+      <td><input type="text" placeholder="name" name="uname"></td>
     </tr>
     <tr>
-      <td>Alfreds Futterkiste</td>
-      <td>Maria Anders</td>
-      <td>Germany</td>
+      <th>Email</th>
+      <td><input type="text" placeholder="name" name="uname"></td>
     </tr>
     <tr>
-      <td>Centro comercial Moctezuma</td>
-      <td>Francisco Chang</td>
-      <td>Mexico</td>
-    </tr>
-    <tr>
-      <td>Ernst Handel</td>
-      <td>Roland Mendel</td>
-      <td>Austria</td>
-    </tr>
-    <tr>
-      <td>Island Trading</td>
-      <td>Helen Bennett</td>
-      <td>UK</td>
-    </tr>
-    <tr>
-      <td>Laughing Bacchus Winecellars</td>
-      <td>Yoshi Tannamuri</td>
-      <td>Canada</td>
-    </tr>
-    <tr>
-      <td>Magazzini Alimentari Riuniti</td>
-      <td>Giovanni Rovelli</td>
-      <td>Italy</td>
-    </tr>
+    <td><label for="cars">Employee Activity Status</label></td>
+    <td><select id="cars">
+        <option value="volvo">Volvo</option>
+        <option value="saab">Saab</option>
+        <option value="opel">Opel</option>
+        <option value="audi">Audi</option>
+      </select></td>
+      </tr>
   </table>
+  <input id="submit" type="submit" value="Get Started" class="btn" />
 
 </div>
 

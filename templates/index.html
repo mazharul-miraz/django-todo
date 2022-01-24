@@ -1,28 +1,56 @@
-{% extends 'base.html' %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+<style>
+   body{
+        background-color:#212423;
+        color:#27c498;
+   }
+   a{
+    text-decoration:none;
+    color:#27c498;
+   }
 
 
-{% block content %}
-<div class="container">
-    <div class ="row">
-        <div class = "twelve columns">
-            <h2>Hello world</h2>
-            <input type="submit" value="home">
-            <input type="submit" value="view">
-            <input type="submit" value="github">
+  li {
+    list-style: none;
+    display: inline-block;
+    margin-left: 10px;
+  }
+  /* mouse over link */
 
-        </div>
-        <div class="six columns">
-            <label for="exampleEmailInput">Your email</label>
-            <input class="u-full-width" type="email" placeholder="test@mailbox.com" id="exampleEmailInput">
-          </div>
-          <table style="width:100%">
-            <tr>
-              <th>Uuser name</th>
-              <td><input type="text" placeholder="name"> </td>
-            </tr>
+  
+  /* selected link */
+  a:active {
+    color: #fff;
+  }
+  nav {
+    width: 100%;
+    border: 1px solid #27c498;
+  }
+  .container{
+    max-width:800px;
+    margin:0 auto;
+    padding:15px 20px;
+  }
 
-          </table
-    </div>
-</div>
+  </style>
 
-{% endblock content %}
+
+</head>
+<body>
+  <div class="container">
+    <nav>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="{% url "newrecord" %}">Create</a></li>
+        <li><a href="{% url "viewdata" %}">View</a></li>
+      </ul>
+    </nav>
+  
+  </div>
+
+</body>
+</html>

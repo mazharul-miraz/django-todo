@@ -20,5 +20,6 @@ from todo import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.createnote, name="createnote"),    
-    path('view/', views.viewdata, name="viewdata"),    
+    path('viewdata/', views.viewdata, name="viewdata"),    
+    path('newrecord/', views.newrecord, name="newrecord"),    
 ]
